@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+    var computerPoints = 0;
+    var userPoints = 0;
+
   $("#start").click(function(){
         // User's choice
         var userChoice = prompt("Do you choose rock, paper or scissors?");
@@ -30,12 +34,13 @@ $(document).ready(function(){
             }
             else if (choice1 === "rock") {
                 if (choice2 === "scissors") {
-
                     $("#result").html(rockWins);
+                    userPoints++;
                 }
                 else if (choice2 === "paper") {
 
                     $("#result").html(paperWins);
+                    computerPoints++;
                 }
 
             }
@@ -43,25 +48,31 @@ $(document).ready(function(){
                 if (choice2 === "scissors") {
 
                     $("#result").html(scissorsWins);
+                    computerPoints++;
                 }
                 else if (choice2 === "rock") {
-
                     $("#result").html(paperWins);
+                    userPoints++;
                 }
             }
             else if (choice1 === "scissors") {
                 if (choice2 === "paper") {
 
                     $("#result").html(scissorsWins);
+                    userPoints++;
                 }
                 else if (choice2 === "rock") {
 
                     $("#result").html(rockWins);
+                    computerPoints++;
                 }
             }
         }
 
         //compare user's and computer's choice
         compare (userChoice, computerChoice);
+
+        $("#userPoints").html(userPoints);
+        $("#computerPoints").html(computerPoints);
   });
 });
