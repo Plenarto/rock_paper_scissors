@@ -1,11 +1,18 @@
+//global var for computer and user points
+
 var computerPoints = 0;
 var userPoints = 0;
 
 $(document).ready(function(){
 
   $("#start").click(function(){
-        // User's choice
-        var userChoice = prompt("Do you choose rock, paper or scissors?");
+
+          /* User's choice - making sure it's rock/paper or scissors */
+          var userChoice;
+          while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")) {
+            userChoice = prompt("Do you choose rock, paper or scissors?");
+          }
+
         //Show user's choice
         $("#userChoice").html(userChoice);
         // Computer's choice
@@ -83,6 +90,7 @@ $(document).ready(function(){
         //compare user's and computer's choice
         compare (userChoice, computerChoice);
 
+        //print total number of points
         $("#userPoints").html(userPoints);
         $("#computerPoints").html(computerPoints);
   });
