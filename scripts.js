@@ -1,7 +1,7 @@
-$(document).ready(function(){
+var computerPoints = 0;
+var userPoints = 0;
 
-    var computerPoints = 0;
-    var userPoints = 0;
+$(document).ready(function(){
 
   $("#start").click(function(){
         // User's choice
