@@ -20,26 +20,33 @@ $(document).ready(function(){
         //Show computer's choice
         $("#computerChoice").html(computerChoice);
 
-        //results var
-        var tie = "The result is a tie!"
-        var rockWins = "Rock wins!"
-        var paperWins = "Paper wins!"
-        var scissorsWins = "Scissors wins!"
+        //informations for player
+        var tie = "The result is a tie"
+        var rockWins = "Rock wins"
+        var paperWins = "Paper wins"
+        var scissorsWins = "Scissors wins"
+
+        var pointsForUser = "Good! Points for you."
+        var pointsForComputer = "What a pity! Points for a computer."
+        var pointsForNobody = "Ha! Nobody receives any points."
 
         //compare choices
         var compare = function(choice1, choice2) {
             if (choice1 === choice2) {
 
                 $("#result").html(tie);
+                $("#pointsFor").html(pointsForNobody);
             }
             else if (choice1 === "rock") {
                 if (choice2 === "scissors") {
                     $("#result").html(rockWins);
+                    $("#pointsFor").html(pointsForUser);
                     userPoints++;
                 }
                 else if (choice2 === "paper") {
 
                     $("#result").html(paperWins);
+                    $("#pointsFor").html(pointsForComputer);
                     computerPoints++;
                 }
 
@@ -48,10 +55,12 @@ $(document).ready(function(){
                 if (choice2 === "scissors") {
 
                     $("#result").html(scissorsWins);
+                    $("#pointsFor").html(pointsForComputer);
                     computerPoints++;
                 }
                 else if (choice2 === "rock") {
                     $("#result").html(paperWins);
+                    $("#pointsFor").html(pointsForUser);
                     userPoints++;
                 }
             }
@@ -59,11 +68,13 @@ $(document).ready(function(){
                 if (choice2 === "paper") {
 
                     $("#result").html(scissorsWins);
+                    $("#pointsFor").html(pointsForUser);
                     userPoints++;
                 }
                 else if (choice2 === "rock") {
 
                     $("#result").html(rockWins);
+                    $("#pointsFor").html(pointsForComputer);
                     computerPoints++;
                 }
             }
