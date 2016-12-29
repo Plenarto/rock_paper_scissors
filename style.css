@@ -1,0 +1,41 @@
+*, #*, .* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/tavern.jpg);
+  background-size: cover;
+  padding-top: 10vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-container {
+  max-width: 900px;
+  background-color: #d3d3d3;
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 20px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 15px;
+}
+
+h1, h2, h3 {
+  font-family: 'Aclonica', sans-serif;
+}
+
+.main-container button {
+  margin-bottom: 20px;
+}
+
+.choice {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.results {
+  font-weight: 800;
+  font-size: 2em;
+}
