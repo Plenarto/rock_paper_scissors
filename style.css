@@ -9,7 +9,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.main-container {
+#main-container {
   max-width: 800px;
   background-color: #ECECEC;
   color: black;
@@ -70,20 +70,18 @@ h1, h2, h3, .choice, .winner, .button {
   color: white;
   font-weight: 800;
   min-width: 80px;
+  position: absolute;
+  bottom: 27%;
 }
 
 .left-container {
   background-color: #1E8BC3;
-  position: absolute;
   left: 0;
-  bottom: 27%;
   border-radius: 0 5px 5px 0;
 }
 
 .right-container {
   background-color: #EC644B;
-  position: absolute;
   right: 0;
-  bottom: 27%;
   border-radius: 5px 0 0 5px;
 }
