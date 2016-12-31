@@ -44,6 +44,7 @@ h1, h2, h3, .choice, .winner {
   padding: 10px;
   color: white;
   font-weight: 800;
+  min-width: 80px;
 }
 
 .left-container {
