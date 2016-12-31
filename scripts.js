@@ -13,8 +13,17 @@ $(document).ready(function(){
             userChoice = prompt("Do you choose rock, paper or scissors?");
           }
 
-        //Show user's choice
-        $("#userChoice").html(userChoice);
+        //Show user's choice as picture
+        if (userChoice === "rock") {
+          $("#userChoice").html("<img src='img/rock.svg'>");
+        }
+        else if (userChoice === "paper") {
+          $("#userChoice").html("<img src='img/paper.svg'>");
+        }
+        else if (userChoice === "scissors") {
+          $("#userChoice").html("<img src='img/scissors.svg'>");
+        }
+
         // Computer's choice
         var computerChoice = Math.random();
         if (computerChoice < 0.34) {
@@ -24,8 +33,16 @@ $(document).ready(function(){
         } else {
           computerChoice = "scissors";
         }
-        //Show computer's choice
-        $("#computerChoice").html(computerChoice);
+        //Show computer's choice as picture
+        if (computerChoice === "rock") {
+          $("#computerChoice").html("<img src='img/rock.svg'>");
+        }
+        else if (computerChoice === "paper") {
+          $("#computerChoice").html("<img src='img/paper.svg'>");
+        }
+        else if (computerChoice === "scissors") {
+          $("#computerChoice").html("<img src='img/scissors.svg'>");
+        }
 
         //informations for player
         var tie = "The result is a tie."
