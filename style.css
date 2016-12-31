@@ -1,5 +1,6 @@
 *, #*, .* {
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 body {
@@ -38,6 +39,7 @@ h1, h2, h3, .choice, .winner {
 .choice, .winner {
   font-weight: 800;
   font-size: 1.5em;
+  min-height: 2em;
 }
 
 .right-container, .left-container {
