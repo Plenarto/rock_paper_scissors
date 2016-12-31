@@ -15,7 +15,7 @@ body {
   color: black;
   margin: 0 auto;
   text-align: center;
-  padding: 30px 20px;
+  padding: 15px 20px;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -23,12 +23,29 @@ body {
   position: relative;
 }
 
-h1, h2, h3, .choice, .winner {
+h1, h2, h3, .choice, .winner, .button {
   font-family: 'Roboto Slab', serif;
   color: #101010;
 }
 
-.main-container button {
+.button {
+  background-color: #F4B350;
+  max-width: 180px;
+  font-size: 0.85em;
+  border-radius: 5px;
+  padding: 10px 5px;
+  margin: 0 auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.15)
+}
+
+.button:hover {
+  background-color: #F89406;
+}
+
+#start.button {
   margin-bottom: 20px;
 }
 
