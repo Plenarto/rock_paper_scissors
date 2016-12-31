@@ -3,14 +3,14 @@
 }
 
 body {
-  background-image: url(img/tavern.jpg);
+  background-color: #2C3E50;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
 
 .main-container {
   max-width: 900px;
-  background-color: #d3d3d3;
+  background-color: #ECECEC;
   color: black;
   margin: 0 auto;
   text-align: center;
@@ -22,8 +22,9 @@ body {
   position: relative;
 }
 
-h1, h2, h3 {
-  font-family: 'Aclonica', sans-serif;
+h1, h2, h3, .choice, .winner {
+  font-family: 'Roboto Slab', serif;
+  color: #101010;
 }
 
 .main-container button {
@@ -35,15 +36,14 @@ h1, h2, h3 {
 }
 
 .choice, .winner {
-  font-family: 'Aclonica', sans-serif;
   font-weight: 800;
   font-size: 1.5em;
 }
 
 .right-container, .left-container {
   padding: 10px;
-    color: white;
-    font-weight: 800;
+  color: white;
+  font-weight: 800;
 }
 
 .left-container {

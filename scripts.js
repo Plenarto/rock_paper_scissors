@@ -28,10 +28,10 @@ $(document).ready(function(){
         $("#computerChoice").html(computerChoice);
 
         //informations for player
-        var tie = "The result is a tie"
-        var rockWins = "Rock wins"
-        var paperWins = "Paper wins"
-        var scissorsWins = "Scissors wins"
+        var tie = "The result is a tie."
+        var rockWins = "Rock wins."
+        var paperWins = "Paper wins."
+        var scissorsWins = "Scissors wins."
 
         var pointsForUser = "Good! Points for you."
         var pointsForComputer = "What a pity! Points for a computer."
