@@ -62,7 +62,10 @@ h1, h2, h3, .choice, .winner, .button {
 
 .choice img,
 .winner img {
-  max-height: 2em;
+  height: 2em;
+  width: auto;
+  padding: 0 20px;
+  vertical-align: middle;
 }
 
 .right-container, .left-container {

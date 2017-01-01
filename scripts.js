@@ -1,21 +1,33 @@
-//global var for computer and user points
 
-var computerPoints = 0;
-var userPoints = 0;
 
 
 $(document).ready(function(){
 
+  //global var for computer and user points
+
+  var computerPoints = 0;
+  var userPoints = 0;
+  var pointsToWin = 3;
+
+
+
 
       $("#start").click(function(){
 
+            //zeroes points if the previous game is over
+            if ((userPoints === pointsToWin) || (computerPoints === pointsToWin)) {
+              userPoints = 0;
+              computerPoints = 0;
+            }
 
+            //makes sure the button has "start" command after previous game
+            $("#start").html("START!");
 
-              /* User's choice - making sure it's rock/paper or scissors */
-              var userChoice;
-              while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")) {
+            /* User's choice - making sure it's rock/paper or scissors */
+            var userChoice;
+            while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")) {
                 userChoice = prompt("Do you choose rock, paper or scissors?");
-              }
+            }
 
             //Show user's choice as picture
             if (userChoice === "rock") {
@@ -37,6 +49,7 @@ $(document).ready(function(){
             } else {
               computerChoice = "scissors";
             }
+
             //Show computer's choice as picture
             if (computerChoice === "rock") {
               $("#computerChoice").html("<img src='img/rock.svg'>");
@@ -49,14 +62,19 @@ $(document).ready(function(){
             }
 
             //informations for player
-            var tie = "The result is a tie."
-            var rockWins = "Rock wins."
-            var paperWins = "Paper wins."
-            var scissorsWins = "Scissors wins."
+            var tie = "The result is a tie.";
+            var rockWins = "Rock wins.";
+            var paperWins = "Paper wins.";
+            var scissorsWins = "Scissors wins.";
 
-            var pointsForUser = "Good! Points for you."
-            var pointsForComputer = "What a pity! Points for a computer."
-            var pointsForNobody = "Ooo! Nobody receives any points."
+            var pointsForUser = "Good! Points for you.";
+            var pointsForComputer = "What a pity! Points for a computer.";
+            var pointsForNobody = "Ooo! Nobody receives any points.";
+
+            var youWonOne = "<img src='img/won1.svg'> Victory! <img src='img/won2.svg'>";
+            var youWonTwo = "You won. Congratulations!";
+            var youLostOne = "<img src='img/lost1.svg'> Defeat! <img src='img/lost2.svg'>";
+            var youLostTwo = "You lost. Try again.";
 
             //compare choices
             var compare = function(choice1, choice2) {
@@ -116,17 +134,15 @@ $(document).ready(function(){
             $("#computerPoints").html(computerPoints);
 
             //checking if the game is over
-            if (userPoints===5) {
-              $("#result").html("Success! You have won.");
-              $("#pointsFor").html("Congratulations!");
-              userPoints=0;
-              computerPoints=0;
+            if (userPoints===pointsToWin) {
+              $("#result").html(youWonOne);
+              $("#pointsFor").html(youWonTwo);
+              $("#start").html("TRY AGAIN");
             }
-            else if (computerPoints===5) {
-              $("#result").html("Defeat! You have lost.");
-              $("#pointsFor").html("Try again.");
-              userPoints=0;
-              computerPoints=0;
+            else if (computerPoints===pointsToWin) {
+              $("#result").html(youLostOne);
+              $("#pointsFor").html(youLostTwo);
+              $("#start").html("TRY AGAIN");
             }
 
     });
