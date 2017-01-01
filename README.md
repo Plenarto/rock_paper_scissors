@@ -1,2 +1,5 @@
 # rock_paper_scissors
-Browser rock-paper-scissors game, built with JS and jQuery.
+
+Browser Rock - Paper - Scissors game, built with JS and jQuery.
+
+https://plenarto.github.io/rock_paper_scissors/

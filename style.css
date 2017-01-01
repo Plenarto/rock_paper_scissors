@@ -102,7 +102,6 @@ h1, h2, h3, .choice, .winner, .button {
 }
 
 
-
 @keyframes entrance {
   0% {
 		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
