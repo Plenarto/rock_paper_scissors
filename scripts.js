@@ -72,9 +72,9 @@ $(document).ready(function(){
             var pointsForNobody = "Ooo! Nobody receives any points.";
 
             var youWonOne = "<img class='resultIcon' src='img/won1.svg'> Victory! <img class='resultIcon' src='img/won2.svg'>";
-            var youWonTwo = "You won. Congratulations!";
+            var youWonTwo = "You've won. Congratulations!";
             var youLostOne = "<img class='resultIcon' src='img/lost1.svg'> Defeat! <img class='resultIcon' src='img/lost2.svg'>";
-            var youLostTwo = "You lost. Try again.";
+            var youLostTwo = "You've lost. Try again.";
 
             //compare choices
             var compare = function(choice1, choice2) {
