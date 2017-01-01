@@ -71,9 +71,9 @@ $(document).ready(function(){
             var pointsForComputer = "What a pity! Points for a computer.";
             var pointsForNobody = "Ooo! Nobody receives any points.";
 
-            var youWonOne = "<img src='img/won1.svg'> Victory! <img src='img/won2.svg'>";
+            var youWonOne = "<img class='resultIcon' src='img/won1.svg'> Victory! <img class='resultIcon' src='img/won2.svg'>";
             var youWonTwo = "You won. Congratulations!";
-            var youLostOne = "<img src='img/lost1.svg'> Defeat! <img src='img/lost2.svg'>";
+            var youLostOne = "<img class='resultIcon' src='img/lost1.svg'> Defeat! <img class='resultIcon' src='img/lost2.svg'>";
             var youLostTwo = "You lost. Try again.";
 
             //compare choices

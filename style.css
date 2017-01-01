@@ -58,6 +58,7 @@ h1, h2, h3, .choice, .winner, .button {
   font-weight: 800;
   font-size: 1.5em;
   min-height: 2em;
+
 }
 
 .choice img,
@@ -66,6 +67,7 @@ h1, h2, h3, .choice, .winner, .button {
   width: auto;
   padding: 0 20px;
   vertical-align: middle;
+  animation: entrance 1.6s ease-out;
 }
 
 .right-container, .left-container {
@@ -87,4 +89,56 @@ h1, h2, h3, .choice, .winner, .button {
   background-color: #EC644B;
   right: 0;
   border-radius: 5px 0 0 5px;
+}
+
+#result .resultIcon {
+  animation: pulse 1.5s infinite;
+}
+
+
+
+@keyframes entrance {
+  0% {
+		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
+	}
+	30% {
+		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+		opacity: 1;
+	}
+	45% {
+		transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	60% {
+		transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	75% {
+		transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	90% {
+		transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.85;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.9);
+		opacity: 0.85;
+	}
 }
