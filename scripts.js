@@ -19,7 +19,8 @@ $(document).ready(function(){
             var userChoice;
             while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")&&
                     (userChoice !== "r") && (userChoice !== "p") && (userChoice !== "s")&&
-                    (userChoice !== "R") && (userChoice !== "P") && (userChoice !== "S")) {
+                    (userChoice !== "R") && (userChoice !== "P") && (userChoice !== "S")&&
+                    (userChoice !== null) && (userChoice !== "")) {
                 userChoice = prompt('What do you choose? \n ROCK - press "r" \n PAPER - press "p" \n SCISSORS - press "s" \n');
             }
 
@@ -45,13 +46,13 @@ $(document).ready(function(){
               $("#userChoice").html("<img src='img/scissors.svg'>");
             }
 
-            // Computer's choice
+            // Computer's choice (only if userChoice isn't null)
             var computerChoice = Math.random();
-            if (computerChoice < 0.34) {
+            if ((computerChoice < 0.34) && (userChoice !== null) && (userChoice !== "")) {
               computerChoice = "rock";
-            } else if(computerChoice <= 0.67) {
+            } else if ((computerChoice <= 0.67)&&(userChoice !== null) && (userChoice !== "")) {
               computerChoice = "paper";
-            } else {
+            } else if ((computerChoice > 0.67) && (userChoice !== null) && (userChoice !== "")) {
               computerChoice = "scissors";
             }
 
