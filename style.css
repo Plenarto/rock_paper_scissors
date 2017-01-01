@@ -21,6 +21,8 @@ body {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
   position: relative;
+  animation: pullDown 2s ease-out;
+  transform-origin: 50% 0%;
 }
 
 h1, h2, h3, .choice, .winner, .button {
@@ -46,8 +48,12 @@ h1, h2, h3, .choice, .winner, .button {
   background-color: #F89406;
 }
 
-#start.button {
+.button {
   margin-bottom: 20px;
+}
+
+#tryAgain {
+  display: none;
 }
 
 .title {
@@ -141,4 +147,40 @@ h1, h2, h3, .choice, .winner, .button {
 		transform: scale(0.9);
 		opacity: 0.85;
 	}
+}
+
+
+@keyframes pullDown {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1.0);
+	}
+}
+
+@-webkit-keyframes pullDown {
+	0% {
+		-webkit-transform: scaleY(0.1);
+	}
+	40% {
+		-webkit-transform: scaleY(1.02);
+	}
+	60% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1.0);
 }

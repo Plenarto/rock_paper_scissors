@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function(){
 
   //global var for computer and user points
@@ -8,9 +6,6 @@ $(document).ready(function(){
   var computerPoints = 0;
   var userPoints = 0;
   var pointsToWin = 3;
-
-
-
 
       $("#start").click(function(){
 
@@ -20,13 +15,23 @@ $(document).ready(function(){
               computerPoints = 0;
             }
 
-            //makes sure the button has "start" command after previous game
-            $("#start").html("START!");
-
             /* User's choice - making sure it's rock/paper or scissors */
             var userChoice;
-            while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")) {
-                userChoice = prompt("Do you choose rock, paper or scissors?");
+            while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")&&
+                    (userChoice !== "r") && (userChoice !== "p") && (userChoice !== "s")&&
+                    (userChoice !== "R") && (userChoice !== "P") && (userChoice !== "S")) {
+                userChoice = prompt('What do you choose? \n ROCK - press "r" \n PAPER - press "p" \n SCISSORS - press "s" \n');
+            }
+
+            //changing user's choices in letters to full words
+            if ((userChoice === "r") || (userChoice === "R")) {
+              userChoice = "rock";
+            }
+            else if ((userChoice === "p") || (userChoice === "P")) {
+              userChoice = "paper";
+            }
+            else if ((userChoice === "s") || (userChoice === "S")) {
+              userChoice = "scissors";
             }
 
             //Show user's choice as picture
@@ -137,13 +142,20 @@ $(document).ready(function(){
             if (userPoints===pointsToWin) {
               $("#result").html(youWonOne);
               $("#pointsFor").html(youWonTwo);
-              $("#start").html("TRY AGAIN");
+              $("#start").css("display","none");
+              $("#tryAgain").css("display","block");
             }
             else if (computerPoints===pointsToWin) {
               $("#result").html(youLostOne);
               $("#pointsFor").html(youLostTwo);
-              $("#start").html("TRY AGAIN");
+              $("#start").css("display","none");
+              $("#tryAgain").css("display","block");
             }
-
     });
+
+          //reloads page when player uses "tryAgain" button
+          $("#tryAgain").click(function(){
+            location.reload();
+          });
+
 });
