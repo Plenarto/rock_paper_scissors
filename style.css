@@ -76,6 +76,11 @@ h1, h2, h3, .choice, .winner, .button, .options {
 
 #tryAgain {
   display: none;
+  background-color: #D2D7D3;
+}
+
+#tryAgain:hover {
+  background-color: #ABB7B7;
 }
 
 .title {
