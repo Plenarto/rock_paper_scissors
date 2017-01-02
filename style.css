@@ -1,4 +1,4 @@
-*, #*, .* {
+*, *::after, *::before {
   box-sizing: border-box;
   font-size: 100%;
 }
@@ -21,11 +21,33 @@ body {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
   position: relative;
-  animation: pullDown 2s ease-out;
+  animation: pullDown 1.7s ease-out;
   transform-origin: 50% 0%;
 }
 
-h1, h2, h3, .choice, .winner, .button {
+.options {
+  text-align: center;
+  font-weight: bold;
+  width: 300px;
+  margin: 10px auto 20px;
+}
+
+.options img {
+  height: 4.5em;
+  width: auto;
+  padding: 10px 10px;
+  margin: 0 10px;
+  vertical-align: middle;
+  min-height: 2em;
+}
+
+.selected {
+  border: solid #F4B350 2px;
+  margin: -2px;
+  border-radius: 5px;
+}
+
+h1, h2, h3, .choice, .winner, .button, .options {
   font-family: 'Roboto Slab', serif;
   color: #101010;
 }
@@ -64,7 +86,6 @@ h1, h2, h3, .choice, .winner, .button {
   font-weight: 800;
   font-size: 1.5em;
   min-height: 2em;
-
 }
 
 .choice img,

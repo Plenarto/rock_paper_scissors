@@ -7,6 +7,12 @@ $(document).ready(function(){
   var userPoints = 0;
   var pointsToWin = 3;
 
+
+  $(".options img").click(function(){
+        $('.options img.selected').not(this).removeClass('selected');
+        $(this).toggleClass('selected');
+  });
+
       $("#start").click(function(){
 
             //zeroes points if the previous game is over
@@ -15,38 +21,26 @@ $(document).ready(function(){
               computerPoints = 0;
             }
 
-            /* User's choice - making sure it's rock/paper or scissors */
+            /* User's choice*/
             var userChoice;
-            while ((userChoice !== "rock") && (userChoice !== "paper") && (userChoice !== "scissors")&&
-                    (userChoice !== "r") && (userChoice !== "p") && (userChoice !== "s")&&
-                    (userChoice !== "R") && (userChoice !== "P") && (userChoice !== "S")&&
-                    (userChoice !== null) && (userChoice !== "")) {
-                userChoice = prompt('What do you choose? \n ROCK - press "r" \n PAPER - press "p" \n SCISSORS - press "s" \n');
-            }
 
-            //changing user's choices in letters to full words
-            if ((userChoice === "r") || (userChoice === "R")) {
+            if ($("#rock").hasClass("selected")) {
               userChoice = "rock";
-            }
-            else if ((userChoice === "p") || (userChoice === "P")) {
-              userChoice = "paper";
-            }
-            else if ((userChoice === "s") || (userChoice === "S")) {
-              userChoice = "scissors";
-            }
-
-            //Show user's choice as picture
-            if (userChoice === "rock") {
+              //Show user's choice as picture
               $("#userChoice").html("<img src='img/rock.svg'>");
             }
-            else if (userChoice === "paper") {
+            else if ($("#paper").hasClass("selected")) {
+              userChoice = "paper";
+              //Show user's choice as picture
               $("#userChoice").html("<img src='img/paper.svg'>");
             }
-            else if (userChoice === "scissors") {
+            else if ($("#scissors").hasClass("selected")) {
+              userChoice = "scissors";
+              //Show user's choice as picture
               $("#userChoice").html("<img src='img/scissors.svg'>");
             }
 
-            // Computer's choice (only if userChoice isn't null)
+            // Computer's choice (only if userChoice isn't null - enables canceling prompt)
             var computerChoice = Math.random();
             if ((computerChoice < 0.34) && (userChoice !== null) && (userChoice !== "")) {
               computerChoice = "rock";
