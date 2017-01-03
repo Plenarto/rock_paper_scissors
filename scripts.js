@@ -40,13 +40,13 @@ $(document).ready(function(){
               $("#userChoice").html("<img src='img/scissors.svg'>");
             }
 
-            // Computer's choice (only if userChoice isn't null - enables canceling prompt)
+            // Computer's choice
             var computerChoice = Math.random();
-            if ((computerChoice < 0.34) && (userChoice !== null) && (userChoice !== "")) {
+            if ((computerChoice < 0.34)&&(userChoice !== undefined)) {
               computerChoice = "rock";
-            } else if ((computerChoice <= 0.67)&&(userChoice !== null) && (userChoice !== "")) {
+            } else if ((computerChoice <= 0.67)&&(userChoice !== undefined)) {
               computerChoice = "paper";
-            } else if ((computerChoice > 0.67) && (userChoice !== null) && (userChoice !== "")) {
+            } else if ((computerChoice > 0.67)&&(userChoice !== undefined)) {
               computerChoice = "scissors";
             }
 
