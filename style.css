@@ -83,6 +83,17 @@ h1, h2, h3, .choice, .winner, .button, .options {
   background-color: #ABB7B7;
 }
 
+h1 {
+  font-size: 1.6em;
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    display: block;
+  }
+}
+
 .title {
   margin: 15px 0;
 }
@@ -91,6 +102,10 @@ h1, h2, h3, .choice, .winner, .button, .options {
   font-weight: 800;
   font-size: 1.5em;
   min-height: 2em;
+}
+
+#pointsFor {
+  font-size: 1.2em;
 }
 
 .choice img,
